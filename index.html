@@ -1,0 +1,135 @@
+<html>
+    <head><title>
+        contactForm
+    </title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          border: #45a049;
+          margin: 0;
+          padding: 20px; 
+          border-color: #45a049;
+        }
+        input,textarea{
+          background: none; 
+          
+        }
+        #contactForm {
+          max-width: 400px;
+          margin: 0 auto; 
+          margin-top: 7%;
+          
+          padding: 20px;
+          border-radius: 5px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+      
+        #contactForm label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold; 
+          color: #45a049; 
+          
+        }
+      
+        #contactForm input[type="text"],
+        #contactForm input[type="email"],
+        #contactForm textarea {
+          width: 100%;
+          padding: 8px;
+          border: 1px solid;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-bottom: 10px;
+          font-size: 14px;  
+          border-color: #4CAF50; 
+          
+        }
+      
+        #captchaDisplay {
+          display: inline-block;
+          
+          padding: 5px 10px;
+          margin-bottom: 10px;
+          border: 1px solid;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+      
+      
+      
+        #contactForm input[type="submit"] {
+          background-color: #4CAF50;
+          
+          border: none;
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 14px;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+      
+        #contactForm input[type="submit"]:hover {
+          background-color: #45a049;
+        }
+      
+        #contactForm textarea {
+          height: 100px;
+        } 
+        #refresh {
+	float: left;
+	
+	height: 40px;
+	border-radius: 0 5px 5px 0; 
+ background: none;
+  
+}
+#refresh h3 {
+	margin-top: 5px;
+	cursor: pointer;
+} 
+.contain input{
+  width: 70%;
+} 
+#refresh button{
+  border: none;
+  border-radius: 30px;
+ background: none;
+}   
+#sub{
+  height: 5%;
+  width: 50%;
+  flex: center; 
+  margin-left: 25%; 
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(127, 142, 255);
+}   
+      </style>
+          
+    </head>
+    <body style="background-image: url('18707649.jpg'); height:100%; width:100%;">
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="enter your name" required>
+          
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="enter your email" required>
+          
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="message" required></textarea>
+          
+            <div class="contain" >
+              <input type="text" id="capt" readonly="readonly"  >
+              <div id="refresh"> <h3 onclick="cap()"><button type="button">Refresh</button></h3></div>
+            
+              <input type="text" id="textinput" placeholder="enter..">
+              <button onclick="validcap()" id="sub">Submit</button>
+            </div> 
+          </form> 
+          <script src="script.js"> </script>
+          
+    </body>
+</html>
